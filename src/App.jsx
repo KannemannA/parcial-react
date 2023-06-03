@@ -6,8 +6,10 @@ import Card from './componentes/Card'
 function App() {
   const [datos, setDatos] = useState("")
   const [errores, setErrores] = useState("")
-  const handleError=(error) => {setErrores(error)}
-  const handleData=(data) =>{setDatos(data)}
+  const handleError=(error) => {setErrores(error)
+  setDatos("")}
+  const handleData=(data) =>{setDatos(data)
+  setErrores("")}
   return (
     <>
       <Form onError={handleError} onData={handleData}/>
